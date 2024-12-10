@@ -1,6 +1,39 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
-    "config:recommended"
+    "config:best-practices"
+  ],
+  "labels": [
+    "dependencies"
+  ],
+  "separateMajorMinor": true,
+  "automerge": true,
+  "flux": {
+    "fileMatch": [
+      "\\.yaml$"
+    ]
+  },
+  "packageRules": [
+    {
+      "matchManagers": [
+        "flux"
+      ],
+      "matchDatasources": [
+        "docker",
+        "helm"
+      ],
+      "labels": [
+        "production"
+      ]
+    },
+    {
+      "matchManagers": [
+        "flux"
+      ],
+      "matchDatasources": [
+        "docker"
+      ],
+      "pinDigests": false
+    }
   ]
 }
