@@ -16,3 +16,17 @@ spec:
   timeout: 10m
   upgrade:
     crds: CreateReplace
+  values:
+    grafana:
+      ingress:
+        enabled: true
+    prometheus:
+      prometheusSpec:
+        retention: 1d
+        storageSpec:
+           volumeClaimTemplate:
+              spec:
+                storageClassName: local-path
+                resources:
+                  requests:
+                    storage: 10Gi
