@@ -19,4 +19,4 @@ spec:
   values:
     cloudflare:
       secretName: cloudflare-tunnel-credentials
-  replicaCount: 1
+    replicaCount: 1
