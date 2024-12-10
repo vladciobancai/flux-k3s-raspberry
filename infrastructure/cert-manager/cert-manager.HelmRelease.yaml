@@ -1,0 +1,24 @@
+---
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: cert-manager
+  namespace: cert-manager
+spec:
+  interval: 10m0s
+  chart:
+    spec:
+      chart: cert-manager
+      version: v1.16.0
+      sourceRef:
+        kind: HelmRepository
+        name: jetstack
+  upgrade:
+    crds: CreateReplace
+  values:
+    installCRDs: true
+    prometheus:
+      servicemonitor:
+        enabled: true
+        labels:
+          release: prom-stack
