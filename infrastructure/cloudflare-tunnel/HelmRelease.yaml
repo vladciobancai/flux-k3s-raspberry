@@ -20,7 +20,7 @@ spec:
     cloudflare:
       tunnelName: 'k3s-raspberryPi'
       secretName: cloudflare-tunnel-credentials
-      ingress:
-        - hostname: k3s-grafana.blueresource.cloud
-          service: http://kube-prometheus-stack-grafana.monitoring.svc.cluster.local
+      # ingress:
+      #   - hostname: k3s-grafana.blueresource.cloud
+      #     service: http://kube-prometheus-stack-grafana.monitoring.svc.cluster.local
     replicaCount: 1
