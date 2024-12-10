@@ -18,10 +18,8 @@ spec:
     crds: CreateReplace
   values:
     grafana:
-      ingress:
-        enabled: false
-        annotations:
-          kubernetes.io/ingress.class: nginx
+      enabled: true
+      adminPassword: "f85KWK7ADNJpOKv"
     prometheus:
       prometheusSpec:
         retention: 1d
