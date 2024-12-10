@@ -20,6 +20,10 @@ spec:
     grafana:
       enabled: true
       adminPassword: "f85KWK7ADNJpOKv"
+      persistence:
+        enabled: true
+        storageClassName: local-path
+        size: 1Gi
     prometheus:
       prometheusSpec:
         retention: 1d
