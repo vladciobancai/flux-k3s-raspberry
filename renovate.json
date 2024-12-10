@@ -4,7 +4,7 @@
     "config:best-practices"
   ],
   "labels": [
-    "dependencies"
+    "k3s"
   ],
   "separateMajorMinor": true,
   "automerge": true,
@@ -21,9 +21,6 @@
       "matchDatasources": [
         "docker",
         "helm"
-      ],
-      "labels": [
-        "production"
       ]
     },
     {
