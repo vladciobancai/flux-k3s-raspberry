@@ -18,5 +18,6 @@ spec:
     crds: CreateReplace
   values:
     cloudflare:
+      tunnelName: 'k3s-raspberryPi'
       secretName: cloudflare-tunnel-credentials
     replicaCount: 1
