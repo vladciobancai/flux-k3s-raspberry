@@ -20,3 +20,5 @@ spec:
     controller:
       kind: Deployment
       replicaCount: 1
+      metrics:
+        enabled: true
