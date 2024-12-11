@@ -22,3 +22,7 @@ spec:
       replicaCount: 1
       metrics:
         enabled: true
+      podAnnotations:
+        prometheus.io/port: "10254"
+        prometheus.io/scrape: "true"
+
