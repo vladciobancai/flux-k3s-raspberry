@@ -26,6 +26,8 @@ spec:
         size: 1Gi
     prometheus:
       prometheusSpec:
+        podMonitorSelectorNilUsesHelmValues: false
+        serviceMonitorSelectorNilUsesHelmValues: false
         retention: 1d
         storageSpec:
            volumeClaimTemplate:
