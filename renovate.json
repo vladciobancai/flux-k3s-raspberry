@@ -21,7 +21,7 @@
       ],
       "matchStrings": ["(?<currentValue>\\S+)"],
       "depNameTemplate": "k3s",
-      "versioning": "regex:^v(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+)(?<compatibility>\\+k3s)(?<build>\\d+)$",
+      "versioningTemplate": "regex:^v(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+)(?<compatibility>\\+k3s)(?<build>\\d+)$",
       "datasourceTemplate": "custom.k3s"
     }
   ],
