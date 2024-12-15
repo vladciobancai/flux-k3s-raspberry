@@ -11,7 +11,7 @@ data:
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Vlad Ciobancai - DevOps CV</title>
+        <title>blueresource.cloud</title>
         <style>
             body {
                 background-color: #000;
@@ -77,11 +77,22 @@ data:
                 font-size: 0.8em;
                 color: #00ff00;
             }
+
+            .social-links a {
+                color: #00ff00;
+                text-decoration: none;
+                margin: 0 10px;
+            }
+
+            .social-links a:hover {
+                text-decoration: underline;
+            }
         </style>
     </head>
     <body>
         <div class="container">
             <h1>Vlad Ciobancai - DevOps Engineer</h1>
+            <h4> I’ll tell you a DNS joke but be advised, it could take up to 24 hours for everyone to get it.</h4>
             <p class="blinking">_</p>
 
             <!-- Experience Section -->
@@ -123,7 +134,7 @@ data:
                     <span>Kubernetes</span>
                     <span>DNS (Infoblox, Bind9)</span>
                     <span>SSL Certificates</span>
-                    <span>CloudFlare</span>
+                    <span>CloudFlare/Akamai</span>
                 </div>
             </div>
 
@@ -163,8 +174,12 @@ data:
             <!-- Footer -->
             <footer>
                 <p>&copy; 2024 Vlad Ciobancai - All Rights Reserved</p>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/ciobancai-vlad/" target="_blank">LinkedIn</a>
+                    <a href="https://github.com/vladciobancai" target="_blank">GitHub</a>
+                    <a href="https://www.credly.com/users/vlad-ciobancai" target="_blank">Credly</a>
+                </div>
             </footer>
         </div>
     </body>
     </html>
-
