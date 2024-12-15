@@ -24,11 +24,25 @@ spec:
         enabled: true
         storageClassName: local-path
         size: 1Gi
+      resources:
+        limits:
+          cpu: 50m
+          memory: 128Mi
+        requests:
+          cpu: 25m
+          memory: 64Mi
     prometheus:
       prometheusSpec:
         podMonitorSelectorNilUsesHelmValues: false
         serviceMonitorSelectorNilUsesHelmValues: false
         retention: 1d
+        resources:
+          limits:
+            cpu: 100m
+            memory: 256Mi
+          requests:
+            cpu: 50m
+            memory: 128Mi
         storageSpec:
            volumeClaimTemplate:
               spec:
