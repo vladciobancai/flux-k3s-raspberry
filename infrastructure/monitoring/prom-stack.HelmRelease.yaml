@@ -18,7 +18,7 @@ spec:
     crds: CreateReplace
   values:
     grafana:
-      enabled: true
+      enabled: false
       adminPassword: "f85KWK7ADNJpOKv"
       persistence:
         enabled: true
