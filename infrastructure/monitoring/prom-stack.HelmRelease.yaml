@@ -31,6 +31,8 @@ spec:
         requests:
           cpu: 25m
           memory: 64Mi
+    alertmanager:
+      enabled: false
     prometheus:
       prometheusSpec:
         podMonitorSelectorNilUsesHelmValues: false
