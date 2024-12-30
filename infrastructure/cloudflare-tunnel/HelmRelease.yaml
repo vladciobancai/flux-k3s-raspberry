@@ -17,6 +17,8 @@ spec:
   upgrade:
     crds: CreateReplace
   values:
+    image:
+      tag: "2024.12.2"
     cloudflare:
       tunnelName: 'k3s-raspberryPi'
       secretName: cloudflare-tunnel-credentials
