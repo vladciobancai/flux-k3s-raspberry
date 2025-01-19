@@ -14,5 +14,3 @@ spec:
         kind: HelmRepository
         name: hashicorp
   timeout: 10m
-  upgrade:
-    crds: CreateReplace
