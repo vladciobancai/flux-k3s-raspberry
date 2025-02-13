@@ -53,5 +53,9 @@
       ],
       "pinDigests": false
     }
-  ]
+  ],
+  "osvVulnerabilityAlerts": true,
+  "vulnerabilityAlerts": {
+      "enabled": true
+  }
 }
