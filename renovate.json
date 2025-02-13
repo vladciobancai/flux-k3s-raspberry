@@ -4,13 +4,14 @@
     "config:best-practices"
   ],
   "labels": [
-    "k3s"
+    "k3s",
+    "dependencies"
   ],
   "separateMajorMinor": true,
   "automerge": true,
   "vulnerabilityAlerts": {
     "labels": ["security"],
-    "automerge": true,
+    "enabled": true,
   },
   "flux": {
     "fileMatch": [
