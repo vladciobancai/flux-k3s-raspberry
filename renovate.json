@@ -8,6 +8,10 @@
   ],
   "separateMajorMinor": true,
   "automerge": true,
+  "vulnerabilityAlerts": {
+    "labels": ["security"],
+    "automerge": true,
+  }
   "flux": {
     "fileMatch": [
       "\\.yaml$"
