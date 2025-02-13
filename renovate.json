@@ -10,7 +10,9 @@
   "separateMajorMinor": true,
   "automerge": true,
   "vulnerabilityAlerts": {
-    "labels": ["security"],
+    "labels": [
+      "security"
+    ],
     "enabled": true,
   },
   "flux": {
