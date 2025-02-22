@@ -22,7 +22,7 @@ spec:
           secretKey: VAULT_TOKEN
         affinity: ""
       standalone:
-        enabled: '-'
+        enabled: true
         config: |
           disable_mlock = true
           ui = true
