@@ -20,7 +20,7 @@ spec:
         - envName: VAULT_TOKEN
           secretName: vault
           secretKey: VAULT_TOKEN
-        affinity: ""
+      affinity: ""
       standalone:
         enabled: true
         config: |
