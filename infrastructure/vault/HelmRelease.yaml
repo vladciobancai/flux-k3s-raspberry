@@ -16,6 +16,11 @@ spec:
   timeout: 10m
   values:
     server:
+      extraSecretEnvironmentVars:
+        - envName: VAULT_TOKEN
+          secretName: vault
+          secretKey: VAULT_TOKEN
+        affinity: ""
       standalone:
         enabled: '-'
         config: |
@@ -23,7 +28,7 @@ spec:
           ui = true
           
           listener "tcp" {
-            tls_disable = "true"
+            tls_disable = 1
             address = "[::]:8200"
             cluster_address = "[::]:8201"
           }
@@ -31,12 +36,13 @@ spec:
           storage "file" {
             path = "/vault/data"
           }
+
+          service_registration "kubernetes" {}
           
           seal "transit" {
             address = "http://vault.vault:8200"
-            token = "hvs.CAESIFAewCw3vdTe7TT4LIyTaoMad-MNNQ3tnJhh15n6sZkjGh4KHGh2cy5RbXhxbmVTcERVUm04VXc0N0FaU0t0aXc"
             disable_renewal = "false"
-            key_name = "autounseal"
-            mount_path = "transit/"
+            key_name        = "autounseal"
+            mount_path      = "transit/"
             tls_skip_verify = "true"
           }
