@@ -19,6 +19,7 @@ spec:
       standalone:
         enabled: '-'
         config: |
+          disable_mlock = true
           ui = true
           
           listener "tcp" {
