@@ -17,7 +17,7 @@ spec:
   values:
     server:
       standalone:
-        enabled: true
+        enabled: '-'
         config: |
           ui = true
           
