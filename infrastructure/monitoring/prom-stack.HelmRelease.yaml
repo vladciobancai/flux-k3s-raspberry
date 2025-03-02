@@ -1,47 +1,35 @@
-# ---
-# apiVersion: helm.toolkit.fluxcd.io/v2beta2
-# kind: HelmRelease
-# metadata:
-#   name: kube-prometheus-stack
-#   namespace: monitoring
-# spec:
-#   interval: 10m0s
-#   chart:
-#     spec:
-#       chart: kube-prometheus-stack
-#       version: 69.6.0
-#       sourceRef:
-#         kind: HelmRepository
-#         name: prometheus-community
-#   timeout: 10m
-#   upgrade:
-#     crds: CreateReplace
-#   values:
-#     grafana:
-#       enabled: false
-#       adminPassword: "f85KWK7ADNJpOKv"
-#       persistence:
-#         enabled: true
-#         storageClassName: local-path
-#         size: 1Gi
-#       resources:
-#         limits:
-#           cpu: 50m
-#           memory: 128Mi
-#         requests:
-#           cpu: 25m
-#           memory: 64Mi
-#     alertmanager:
-#       enabled: true
-#     prometheus:
-#       prometheusSpec:
-#         podMonitorSelectorNilUsesHelmValues: false
-#         serviceMonitorSelectorNilUsesHelmValues: false
-#         retention: 1d
-#         storageSpec:
-#            volumeClaimTemplate:
-#               spec:
-#                 storageClassName: local-path
-#                 resources:
-#                   requests:
-#                     storage: 10Gi
+---
+apiVersion: helm.toolkit.fluxcd.io/v2beta2
+kind: HelmRelease
+metadata:
+  name: kube-prometheus-stack
+  namespace: monitoring
+spec:
+  interval: 10m0s
+  chart:
+    spec:
+      chart: kube-prometheus-stack
+      version: 69.6.0
+      sourceRef:
+        kind: HelmRepository
+        name: prometheus-community
+  timeout: 10m
+  upgrade:
+    crds: CreateReplace
+  values:
+    grafana:
+      enabled: false
+    alertmanager:
+      enabled: false
+    prometheus:
+      prometheusSpec:
+        podMonitorSelectorNilUsesHelmValues: false
+        serviceMonitorSelectorNilUsesHelmValues: false
+        retention: 1d
+        storageSpec:
+           volumeClaimTemplate:
+              spec:
+                storageClassName: local-path
+                resources:
+                  requests:
+                    storage: 10Gi
