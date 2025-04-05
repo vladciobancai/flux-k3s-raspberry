@@ -4,8 +4,6 @@ metadata:
   name: ingress-nginx
   namespace: flux-system
 spec:
-  dependsOn:
-    - name: monitoring
   interval: 10m
   path: ./infrastructure/ingress-nginx
   prune: true
