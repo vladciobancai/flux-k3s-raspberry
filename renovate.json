@@ -10,17 +10,19 @@
   "separateMajorMinor": true,
   "automerge": true,
   "flux": {
-    "fileMatch": [
-      "\\.yaml$"
+    "managerFilePatterns": [
+      "/\\.yaml$/"
     ]
   },
   "customManagers": [
     {
       "customType": "regex",
-      "fileMatch": [
-        "^infrastructure/k3s/k3s-upgrade-plan.yaml"
+      "managerFilePatterns": [
+        "/^infrastructure/k3s/k3s-upgrade-plan.yaml/"
       ],
-      "matchStrings": ["(?<currentValue>\\S+)"],
+      "matchStrings": [
+        "(?<currentValue>\\S+)"
+      ],
       "depNameTemplate": "k3s",
       "versioningTemplate": "regex:^v(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+)(?<compatibility>\\+k3s)(?<build>\\d+)$",
       "datasourceTemplate": "custom.k3s"
@@ -56,6 +58,6 @@
   ],
   "osvVulnerabilityAlerts": true,
   "vulnerabilityAlerts": {
-      "enabled": true
+    "enabled": true
   }
 }
