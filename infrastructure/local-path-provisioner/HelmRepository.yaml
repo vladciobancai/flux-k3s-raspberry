@@ -6,4 +6,4 @@ metadata:
 spec:
   type: oci
   interval: 10m
-  url: oci://registry-1.docker.io/rancher
+  url: oci://ghcr.io/rancher/local-path-provisioner/charts
