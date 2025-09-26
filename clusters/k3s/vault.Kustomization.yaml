@@ -4,6 +4,8 @@ metadata:
   name: vault
   namespace: flux-system
 spec:
+  dependsOn:
+    - name: local-path-provisioner
   interval: 10m
   path: ./infrastructure/vault
   prune: true
