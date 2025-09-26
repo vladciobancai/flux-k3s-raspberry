@@ -1,36 +1,36 @@
----
-apiVersion: cert-manager.io/v1
-kind: ClusterIssuer
-metadata:
-  name: letsnecrypt-production
-spec:
-  acme:
-    email: ngagecj@gmail.com
-    server: https://acme-v02.api.letsencrypt.org/directory
-    privateKeySecretRef:
-      name: cluster-issuer-production
-    solvers:
-    - dns01:
-        cloudflare:
-          email: ngagecj@gmail.com
-          apiTokenSecretRef:
-            name: cloudflare-api-token-secret
-            key: api-token
----
-apiVersion: cert-manager.io/v1
-kind: ClusterIssuer
-metadata:
-  name: letsnecrypt-staging
-spec:
-  acme:
-    email: ngagecj@gmail.com
-    server: https://acme-staging-v02.api.letsencrypt.org/directory
-    privateKeySecretRef:
-      name: cluster-issuer-staging
-    solvers:
-    - dns01:
-        cloudflare:
-          email: ngagecj@gmail.com
-          apiTokenSecretRef:
-            name: cloudflare-api-token-secret
-            key: api-token
+# ---
+# apiVersion: cert-manager.io/v1
+# kind: ClusterIssuer
+# metadata:
+#   name: letsnecrypt-production
+# spec:
+#   acme:
+#     email: ngagecj@gmail.com
+#     server: https://acme-v02.api.letsencrypt.org/directory
+#     privateKeySecretRef:
+#       name: cluster-issuer-production
+#     solvers:
+#     - dns01:
+#         cloudflare:
+#           email: ngagecj@gmail.com
+#           apiTokenSecretRef:
+#             name: cloudflare-api-token-secret
+#             key: api-token
+# ---
+# apiVersion: cert-manager.io/v1
+# kind: ClusterIssuer
+# metadata:
+#   name: letsnecrypt-staging
+# spec:
+#   acme:
+#     email: ngagecj@gmail.com
+#     server: https://acme-staging-v02.api.letsencrypt.org/directory
+#     privateKeySecretRef:
+#       name: cluster-issuer-staging
+#     solvers:
+#     - dns01:
+#         cloudflare:
+#           email: ngagecj@gmail.com
+#           apiTokenSecretRef:
+#             name: cloudflare-api-token-secret
+#             key: api-token
