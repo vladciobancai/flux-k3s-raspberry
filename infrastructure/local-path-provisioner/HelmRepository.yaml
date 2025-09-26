@@ -1,0 +1,9 @@
+---
+apiVersion: source.toolkit.fluxcd.io/v1beta2
+kind: HelmRepository
+metadata:
+  name: local-path-storage
+  namespace: local-path-storage
+spec:
+  interval: 10m0s
+  url: https://charts.rancher.io
