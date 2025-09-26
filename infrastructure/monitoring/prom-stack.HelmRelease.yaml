@@ -29,7 +29,7 @@ spec:
         storageSpec:
            volumeClaimTemplate:
               spec:
-                storageClassName: local-path
+                storageClassName: nvme-local
                 resources:
                   requests:
                     storage: 10Gi
