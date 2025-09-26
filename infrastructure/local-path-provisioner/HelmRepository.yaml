@@ -1,9 +1,9 @@
 apiVersion: source.toolkit.fluxcd.io/v1beta2
 kind: HelmRepository
 metadata:
-  name: local-path-storage
+  name: rancher-oci
   namespace: local-path-storage
 spec:
   type: oci
-  interval: 10m0s
+  interval: 10m
   url: oci://registry-1.docker.io/rancher
