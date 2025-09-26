@@ -12,7 +12,7 @@ spec:
       version: 0.0.33
       sourceRef:
         kind: HelmRepository
-        name: ilocal-path-storage
+        name: local-path-storage
   timeout: 20m
   upgrade:
     crds: CreateReplace
