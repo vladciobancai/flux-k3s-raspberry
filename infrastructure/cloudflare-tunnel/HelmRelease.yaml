@@ -18,11 +18,11 @@ spec:
     crds: CreateReplace
   values:
     image:
-      tag: "2025.2.1"
+      tag: "2025.9.1"
     cloudflare:
       tunnelName: 'k3s-raspberryPi'
       secretName: cloudflare-tunnel-credentials
       ingress:
-        - hostname: blueresource.cloud
-          service: http://svc-blueresourcecloud.blueresourcecloud.svc.cluster.local
+        - hostname: vladciobancai.ro
+          service: http://svc-vladciobancai.vladciobancai.svc.cluster.local
     replicaCount: 2
