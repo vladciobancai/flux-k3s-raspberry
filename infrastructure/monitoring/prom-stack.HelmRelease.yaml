@@ -18,14 +18,14 @@ spec:
     crds: CreateReplace
   values:
     grafana:
-      enabled: false
+      enabled: true
     alertmanager:
       enabled: false
     prometheus:
       prometheusSpec:
         podMonitorSelectorNilUsesHelmValues: false
         serviceMonitorSelectorNilUsesHelmValues: false
-        retention: 1d
+        retention: 7d
         storageSpec:
            volumeClaimTemplate:
               spec:
