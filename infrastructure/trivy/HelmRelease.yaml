@@ -1,0 +1,18 @@
+---
+apiVersion: helm.toolkit.fluxcd.io/v2beta2
+kind: HelmRelease
+metadata:
+  name: trivy-operator
+  namespace: aqua
+spec:
+  interval: 10m
+  chart:
+    spec:
+      chart: trivy-operator
+      version: 0.30.0
+      sourceRef:
+        kind: HelmRepository
+        name: aqua
+  upgrade:
+    crds: CreateReplace
+  values:
