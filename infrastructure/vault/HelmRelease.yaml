@@ -15,18 +15,24 @@ spec:
         name: hashicorp
   timeout: 10m
   values:
+    injector:
+      enabled: false
     server:
-      affinity: ""
-      standalone:
+      dev:
         enabled: true
-      postStart:
-        - sh
-        - -c
-        - |
-          sleep 10
-          vault operator init >> /tmp/init.txt
-          cat /tmp/init.txt | grep "Key " | awk '{print $NF}' | xargs -I{} vault operator unseal {}
-          rm /tmp/init.txt
-    datastorage:
-      enabled: true
-      storageClass: nvme-local
+      datastorage:
+        enabled: true
+        storageClass: nvme-local
+      standalone:
+        enabled: "-"
+        config: |
+          ui = true
+
+          listener "tcp" {
+            tls_disable = 1
+            address = "[::]:8200"
+            cluster_address = "[::]:8201"
+          }
+          storage "file" {
+            path = "/vault/data"
+          }
