@@ -27,7 +27,7 @@ spec:
       severity: "HIGH,CRITICAL"
       slow: true
       storageClassEnabled: true
-      storageClassName: ebs-storage-class
+      storageClassName: nvme-local
       storageSize: "10Gi"
       vulnType: "library, os"
     operator:
