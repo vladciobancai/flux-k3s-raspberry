@@ -19,6 +19,12 @@ spec:
   values:
     grafana:
       enabled: true
+      persistence:
+        enabled: true
+        accessModes:
+          - ReadWriteOnces
+        size: 5Gi
+        storageClassName: nvme-local
     alertmanager:
       enabled: false
     prometheus:
