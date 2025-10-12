@@ -16,3 +16,22 @@ spec:
   upgrade:
     crds: CreateReplace
   values:
+    compliance:
+      reportType: summary
+      cron: "0 0 * * *"
+    trivy:
+      ignoreUnfixed: true
+      mode: ClientServer
+      serverURL: "http://trivy-server.aqua:4954"
+      serverInsecure: true
+      severity: "HIGH,CRITICAL"
+      slow: true
+      storageClassEnabled: true
+      storageClassName: ebs-storage-class
+      storageSize: "10Gi"
+      vulnType: "library, os"
+    operator:
+      scanJobsConcurrentLimit: 5
+      builtInTrivyServer: true
+    serviceMonitor:
+      enabled: true
