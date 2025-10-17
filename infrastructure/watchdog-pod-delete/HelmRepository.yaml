@@ -1,0 +1,9 @@
+---
+apiVersion: source.toolkit.fluxcd.io/v1
+kind: HelmRepository
+metadata:
+  name: watchdog-pod-delete
+  namespace: watchdog-pod-delete
+spec:
+  interval: 10m0s
+  url: https://aeciopires.github.io/helm-watchdog-pod-delete
