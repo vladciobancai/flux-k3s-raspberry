@@ -8,7 +8,7 @@ spec:
   interval: 10m
   chart:
     spec:
-      chart: watchdog-pod-delete
+      chart: helm-watchdog-pod-delete
       version: 0.2.0
       sourceRef:
         kind: HelmRepository
