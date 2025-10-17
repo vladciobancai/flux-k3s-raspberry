@@ -14,4 +14,6 @@ spec:
         kind: HelmRepository
         name: helm-watchdog-pod-delete
   values:
+    image:
+      repository: "bitnamilegacy/kubectl"
 
