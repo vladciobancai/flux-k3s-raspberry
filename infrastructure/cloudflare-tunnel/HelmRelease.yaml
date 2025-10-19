@@ -25,6 +25,4 @@ spec:
       ingress:
         - hostname: vladciobancai.ro
           service: http://svc-vladciobancai.vladciobancai.svc.cluster.local
-        - hostname: grafana.vladciobancai.local
-          service: http://kube-prometheus-stack-grafana.monitoring.svc.cluster.local
     replicaCount: 2
