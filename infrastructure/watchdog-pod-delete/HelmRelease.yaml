@@ -9,7 +9,7 @@ spec:
   chart:
     spec:
       chart: helm-watchdog-pod-delete
-      version: 0.2.0
+      version: 0.3.0
       sourceRef:
         kind: HelmRepository
         name: helm-watchdog-pod-delete
