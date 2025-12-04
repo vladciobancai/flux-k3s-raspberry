@@ -23,6 +23,8 @@ spec:
           paths:
             - path: /
               pathType: ImplementationSpecific
+    nodeSelector:
+      kubernetes.io/hostname: "raspberrypi"
     persistence:
       enabled: true
       size: 20Gi
