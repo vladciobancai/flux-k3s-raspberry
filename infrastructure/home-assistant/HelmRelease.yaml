@@ -22,7 +22,7 @@ spec:
         - host: home-assistant.vladciobancai.ro
           paths:
             - path: /
-              pathType: ImplementationSpecific
+              pathType: Prefix
     nodeSelector:
       kubernetes.io/hostname: "raspberrypi"
     persistence:
