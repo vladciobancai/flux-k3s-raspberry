@@ -16,6 +16,7 @@ spec:
   values:
     ingress:
       enabled: true
+      hosts: home-assistant.vladciobancai.ro
     persistence:
       enabled: true
       size: 20Gi
