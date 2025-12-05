@@ -15,6 +15,30 @@ spec:
         name: descheduler
   values:
     kind: Deployment
+    deschedulingInterval: 5m
+    deschedulerPolicy:
+      metricsProviders:
+        - source: KubernetesMetrics
+      profiles:
+        - name: default
+          pluginConfig:
+            - name: RemoveDuplicates
+            - name: RemovePodsHavingTooManyRestarts
+              args:
+                podRestartThreshold: 2
+                includingInitContainers: true
+          plugins:
+            balance:
+              enabled:
+                - RemoveDuplicates
+                - RemovePodsViolatingTopologySpreadConstraint
+                - LowNodeUtilization
+            deschedule:
+              enabled:
+                - RemovePodsHavingTooManyRestarts
+                - RemovePodsViolatingNodeTaints
+                - RemovePodsViolatingNodeAffinity
+                - RemovePodsViolatingInterPodAntiAffinity
     service:
       enabled: true
     serviceMonitor:
