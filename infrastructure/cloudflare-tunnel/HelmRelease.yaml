@@ -18,7 +18,7 @@ spec:
     crds: CreateReplace
   values:
     image:
-      tag: "2025.11.1"
+      tag: "2026.1.2"
     cloudflare:
       tunnelName: 'k3s-raspberryPi'
       secretName: cloudflare-tunnel-credentials
