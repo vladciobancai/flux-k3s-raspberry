@@ -25,4 +25,6 @@ spec:
       ingress:
         - hostname: vladciobancai.ro
           service: http://svc-vladciobancai.vladciobancai.svc.cluster.local
+        - hostname: gotify.vladciobancai.ro
+          service: http://gotify-headless.gotify.svc.cluster.local
     replicaCount: 2
