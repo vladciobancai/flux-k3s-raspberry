@@ -8,7 +8,7 @@ spec:
   interval: 10m
   chart:
     spec:
-      chart: ogotifyf
+      chart: gotify
       version: 0.8.0
       sourceRef:
         kind: HelmRepository
