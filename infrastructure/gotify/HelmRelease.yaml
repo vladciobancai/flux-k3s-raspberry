@@ -16,3 +16,6 @@ spec:
   values:
     server:
       timezone: "Europe/Bucharest"
+    persistence:
+      enabled: true
+      size: "10Gi"
