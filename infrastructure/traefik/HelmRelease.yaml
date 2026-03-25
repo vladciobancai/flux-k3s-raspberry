@@ -17,6 +17,8 @@ spec:
   upgrade:
     crds: CreateReplace
   values:
+    deployment:
+      kind: "Deployment"
     providers:
       kubernetesIngressNginx:
         enabled: true
