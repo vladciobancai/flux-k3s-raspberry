@@ -42,7 +42,7 @@ spec:
     ingress:
       enabled: true
       annotations:
-        kubernetes.io/ingress.class: nginx
+        kubernetes.io/ingress.class: traefik
       hosts:
         - host: home-assistant.vladciobancai.ro
           paths:
