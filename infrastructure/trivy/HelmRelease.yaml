@@ -27,7 +27,6 @@ spec:
       severity: "HIGH,CRITICAL"
       slow: true
       storageClassEnabled: true
-      storageClassName: nvme-local
       storageSize: "10Gi"
       vulnType: "library, os"
     operator:

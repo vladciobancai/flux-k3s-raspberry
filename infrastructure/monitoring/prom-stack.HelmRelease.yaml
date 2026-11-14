@@ -30,7 +30,6 @@ spec:
       persistence:
         enabled: true
         size: 5Gi
-        storageClassName: nvme-local
     alertmanager:
       enabled: false
     prometheus:
@@ -41,7 +40,6 @@ spec:
         storageSpec:
            volumeClaimTemplate:
               spec:
-                storageClassName: nvme-local
                 resources:
                   requests:
                     storage: 10Gi
