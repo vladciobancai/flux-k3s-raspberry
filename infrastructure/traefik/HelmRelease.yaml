@@ -19,7 +19,3 @@ spec:
   values:
     deployment:
       kind: "Deployment"
-    providers:
-      kubernetesIngressNginx:
-        enabled: true
-
