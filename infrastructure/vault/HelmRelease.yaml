@@ -22,7 +22,6 @@ spec:
         enabled: true
       datastorage:
         enabled: true
-        storageClass: nvme-local
       standalone:
         enabled: "-"
         config: |

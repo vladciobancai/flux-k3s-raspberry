@@ -53,4 +53,3 @@ spec:
     persistence:
       enabled: true
       size: 20Gi
-      storageClass: nvme-local
