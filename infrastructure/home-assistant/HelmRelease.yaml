@@ -45,3 +45,8 @@ spec:
     persistence:
       enabled: true
       size: 20Gi
+    serviceMonitor:
+      enabled: true
+      scrapeInterval: 30s
+      labels:
+        release: prometheus

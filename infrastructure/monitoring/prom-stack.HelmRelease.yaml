@@ -32,6 +32,15 @@ spec:
         size: 5Gi
     alertmanager:
       enabled: false
+    grafana.ini:
+      server:
+        root_url: https://grafana.vladciobancai.ro
+      auth.anonymous:
+        enabled: true
+        org_name: Main Org.
+        org_role: Admin
+      auth:
+        disable_login_form: true
     prometheus:
       prometheusSpec:
         podMonitorSelectorNilUsesHelmValues: false
