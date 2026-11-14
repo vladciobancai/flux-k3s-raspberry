@@ -1,9 +1,0 @@
-apiVersion: source.toolkit.fluxcd.io/v1
-kind: HelmRepository
-metadata:
-  name: rancher-oci
-  namespace: local-path-storage
-spec:
-  type: oci
-  interval: 10m
-  url: oci://ghcr.io/rancher/local-path-provisioner/charts
