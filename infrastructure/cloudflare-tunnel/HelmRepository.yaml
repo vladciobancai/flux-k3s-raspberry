@@ -1,9 +1,0 @@
----
-apiVersion: source.toolkit.fluxcd.io/v1
-kind: HelmRepository
-metadata:
-  name: cloudflare-tunnel
-  namespace: cloudflare
-spec:
-  interval: 10m0s
-  url: https://cloudflare.github.io/helm-charts
