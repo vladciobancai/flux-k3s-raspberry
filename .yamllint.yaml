@@ -18,7 +18,7 @@ rules:
   # Allow standard 2-space indentation (common for K8s manifests)
   indentation:
     spaces: 2
-    indent-sequences: true
+    indent-sequences: consistent
     check-multi-line-strings: false
 
   # Ensure truthy values like 'on:' in GitHub Workflows are handled cleanly
@@ -27,6 +27,6 @@ rules:
 
 # Ignore large generated manifests and vendor/CRD files
 ignore: |
-  ./clusters/k3s/flux-system/gotk-components.yaml
-  ./infrastructure/k3s/crd.yaml
-  ./infrastructure/cert-manager/letsnecrypt/cloudflare-apiToken.SealedSecret.yaml
+  clusters/k3s/flux-system/gotk-components.yaml
+  infrastructure/k3s/crd.yaml
+  infrastructure/cert-manager/letsnecrypt/cloudflare-apiToken.SealedSecret.yaml

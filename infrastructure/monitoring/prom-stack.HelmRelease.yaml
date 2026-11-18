@@ -47,8 +47,8 @@ spec:
         serviceMonitorSelectorNilUsesHelmValues: false
         retention: 7d
         storageSpec:
-           volumeClaimTemplate:
-              spec:
-                resources:
-                  requests:
-                    storage: 10Gi
+          volumeClaimTemplate:
+            spec:
+              resources:
+                requests:
+                  storage: 10Gi

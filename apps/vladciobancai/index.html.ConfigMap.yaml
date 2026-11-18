@@ -2,8 +2,8 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-    name: index-html-configmap
-    namespace: vladciobancai
+  name: index-html-configmap
+  namespace: vladciobancai
 data:
   index.html: |
     <!DOCTYPE html>
