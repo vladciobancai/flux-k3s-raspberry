@@ -7,7 +7,6 @@ rules:
     max: 120
     level: warning
     allow-non-breakable-words: true
-    allow-non-breakable-inline-comments: true
 
   # Disable requirement for leading '---' across all manifests
   document-start: disable
