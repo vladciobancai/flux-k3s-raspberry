@@ -1,0 +1,33 @@
+---
+extends: default
+
+rules:
+  # Relax line length for URLs, secrets, and embedded HTML/ConfigMaps
+  line-length:
+    max: 120
+    level: warning
+    allow-non-breakable-words: true
+    allow-non-breakable-inline-comments: true
+
+  # Disable requirement for leading '---' across all manifests
+  document-start: disable
+
+  # Standardize spacing before inline comments (#)
+  comments:
+    min-spaces-from-content: 2
+
+  # Allow standard 2-space indentation (common for K8s manifests)
+  indentation:
+    spaces: 2
+    indent-sequences: true
+    check-multi-line-strings: false
+
+  # Ensure truthy values like 'on:' in GitHub Workflows are handled cleanly
+  truthy:
+    allowed-values: ['true', 'false', 'on']
+
+# Ignore large generated manifests and vendor/CRD files
+ignore: |
+  ./clusters/k3s/flux-system/gotk-components.yaml
+  ./infrastructure/k3s/crd.yaml
+  ./infrastructure/cert-manager/letsnecrypt/cloudflare-apiToken.SealedSecret.yaml
