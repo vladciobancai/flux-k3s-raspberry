@@ -4,7 +4,7 @@ extends: default
 rules:
   # Relax line length for URLs, secrets, and embedded HTML/ConfigMaps
   line-length:
-    max: 120
+    max: 160
     level: warning
     allow-non-breakable-words: true
 
@@ -23,7 +23,8 @@ rules:
 
   # Ensure truthy values like 'on:' in GitHub Workflows are handled cleanly
   truthy:
-    allowed-values: ['true', 'false', 'on']
+    allowed-values: ['true', 'false']
+    check-keys: false
 
 # Ignore large generated manifests and vendor/CRD files
 ignore: |
