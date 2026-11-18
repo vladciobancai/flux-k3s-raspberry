@@ -4,6 +4,8 @@ metadata:
   name: trivy-operator
   namespace: flux-system
 spec:
+  dependsOn:
+    - name: monitoring
   interval: 10m
   path: ./infrastructure/trivy
   prune: true
