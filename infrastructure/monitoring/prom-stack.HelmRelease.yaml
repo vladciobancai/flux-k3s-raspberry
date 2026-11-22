@@ -25,7 +25,8 @@ spec:
         enabled: true
         annotations:
           kubernetes.io/ingress.class: traefik
-          cert-manager.io/cluster-issuer: "letsencrypt-prod"
+          cert-manager.io/cluster-issuer: "letsnecrypt-production"
+          traefik.ingress.kubernetes.io/router.middlewares: "monitoring-grafana-ip-white-list@kubernetescrd"
         hosts:
           - grafana.linuxdns.work
         tls:
@@ -37,10 +38,11 @@ spec:
           root_url: https://grafana.linuxdns.work
         auth:
           disable_login_form: true
+          disable_signout_menu: true
         auth.anonymous:
           enabled: true
           org_name: Main Org.
-          org_role: Admin
+          org_role: Viewer
       persistence:
         enabled: true
         size: 5Gi
