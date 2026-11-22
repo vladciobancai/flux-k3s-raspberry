@@ -25,11 +25,16 @@ spec:
         enabled: true
         annotations:
           kubernetes.io/ingress.class: traefik
+          cert-manager.io/cluster-issuer: "letsencrypt-prod"
         hosts:
-          - grafana.vladciobancai.ro
+          - grafana.linuxdns.work
+        tls:
+          - secretName: grafana-tls # cert-manager will store the TLS certificate in this secret
+            hosts:
+              - grafana.linuxdns.work
       grafana.ini:
         server:
-          root_url: https://grafana.vladciobancai.ro
+          root_url: https://grafana.linuxdns.work
         auth:
           disable_login_form: true
         auth.anonymous:
