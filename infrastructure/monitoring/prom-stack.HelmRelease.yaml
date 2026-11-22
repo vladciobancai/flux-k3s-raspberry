@@ -25,7 +25,7 @@ spec:
         enabled: true
         annotations:
           kubernetes.io/ingress.class: traefik
-          cert-manager.io/cluster-issuer: "letsnecrypt-production"
+          cert-manager.io/cluster-issuer: "letsencrypt-production"
         hosts:
           - grafana.linuxdns.work
         tls:
