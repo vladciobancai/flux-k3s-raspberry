@@ -8,7 +8,7 @@ spec:
   path: ./infrastructure/flux
   prune: true
   sourceRef:
-    kind: gitrepository
+    kind: GitRepository
     name: flux-system
   targetNamespace: flux-system
   wait: true
