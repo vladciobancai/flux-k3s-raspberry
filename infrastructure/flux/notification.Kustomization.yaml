@@ -16,10 +16,15 @@ metadata:
   name: github-commit-status
   namespace: flux-system
 spec:
+  eventMetadata:
+    env: "production"
+    cluster: "k3s_raspberry-pi5"
+    region: "ro"
   providerRef:
     name: github
   eventSeverity: info
   eventSources:
+    - kind: GitRepository
+      name: '*'
     - kind: Kustomization
       name: '*'
-      namespace: flux-system
