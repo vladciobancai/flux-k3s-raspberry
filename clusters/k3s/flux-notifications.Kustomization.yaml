@@ -7,7 +7,7 @@ spec:
   interval: 10m
   path: ./infrastructure/flux
   prune: true
-  sourceref:
+  sourceRef:
     kind: gitrepository
     name: flux-system
   targetNamespace: flux-system
