@@ -10,5 +10,5 @@ spec:
   sourceref:
     kind: gitrepository
     name: flux-system
-  targetNamespace: system-upgrade
+  targetNamespace: flux-system
   wait: true
