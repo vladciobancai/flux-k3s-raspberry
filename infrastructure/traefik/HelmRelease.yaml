@@ -19,10 +19,14 @@ spec:
   values:
     deployment:
       kind: "Deployment"
+    api:
+      dashboard:
+        enabled: true
     ingressRoute:
       dashboard:
         enabled: true
     metrics:
+      addInternals: true
       prometheus:
         serviceMonitor:
           additionalLabels:
