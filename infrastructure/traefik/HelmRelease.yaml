@@ -48,14 +48,3 @@ spec:
           additionalLabels:
             release: prom-stack
           enabled: true
-    ports:
-      web:
-        # -- If you are handling ACME HTTP challenges with another service (e.g. cert-manager),
-        #    you may enable this option to prevent redirects on ACME challenge routes for this port.
-        # allowACMEByPass: true
-        http:
-          redirections:
-            entryPoint:
-              to: websecure
-              scheme: https
-              permanent: true
