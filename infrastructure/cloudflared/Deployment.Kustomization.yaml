@@ -18,7 +18,8 @@ spec:
           image: cloudflare/cloudflared:2026.11.2
           args:
             - tunnel
-            - --no-autoupdate
+            - --config
+            - /etc/cloudflared/config/config.yaml
             - run
             - --token
             - $(TUNNEL_TOKEN)
@@ -28,10 +29,15 @@ spec:
                 secretKeyRef:
                   name: cloudflare-tunnel-token
                   key: token
+          volumeMounts:
+            - name: config
+              mountPath: /etc/cloudflared/config
+              readOnly: true
           livenessProbe:
             httpGet:
               path: /ready
               port: 20000
+            failureThreshold: 1
             initialDelaySeconds: 10
             periodSeconds: 10
           resources:
@@ -46,3 +52,7 @@ spec:
             readOnlyRootFilesystem: true
             runAsNonRoot: true
             runAsUser: 65532
+      volumes:
+        - name: config
+          configMap:
+            name: cloudflared-config
