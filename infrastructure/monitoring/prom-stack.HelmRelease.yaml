@@ -29,7 +29,7 @@ spec:
         hosts:
           - grafana.linuxdns.work
         tls:
-          - secretName: grafana-tls # cert-manager will store the TLS certificate in this secret
+          - secretName: grafana-tls
             hosts:
               - grafana.linuxdns.work
       grafana.ini:
