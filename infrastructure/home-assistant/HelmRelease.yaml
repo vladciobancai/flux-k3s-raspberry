@@ -48,7 +48,7 @@ spec:
             - path: /
               pathType: Prefix
       tls:
-        - secretName: home-assistant-tls # cert-manager will store the TLS cert here
+        - secretName: home-assistant-tls
           hosts:
             - home-assistant.linuxdns.work
     persistence:
