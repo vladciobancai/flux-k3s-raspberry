@@ -17,17 +17,30 @@ spec:
   upgrade:
     crds: CreateReplace
   values:
-    deployment:
-      kind: "Deployment"
-    autoscaling:
-      enabled: true
-      minReplicas: 1
-      maxReplicas: 3
     api:
       dashboard: true
+    autoscaling:
+      enabled: true
+      maxReplicas: 2
+      metrics:
+      - type: Resource
+        resource:
+          name: cpu
+          target:
+            type: Utilization
+            averageUtilization: 80
+    deployment:
+      replicas: null
     ingressRoute:
       dashboard:
         enabled: true
+    resources:
+      requests:
+        cpu: "100m"
+        memory: "50Mi"
+      limits:
+        cpu: "300m"
+        memory: "150Mi"
     metrics:
       addInternals: true
       prometheus:
@@ -35,3 +48,14 @@ spec:
           additionalLabels:
             release: prom-stack
           enabled: true
+    ports:
+      web:
+        # -- If you are handling ACME HTTP challenges with another service (e.g. cert-manager),
+        #    you may enable this option to prevent redirects on ACME challenge routes for this port.
+        # allowACMEByPass: true
+        http:
+          redirections:
+            entryPoint:
+              to: websecure
+              scheme: https
+              permanent: true
