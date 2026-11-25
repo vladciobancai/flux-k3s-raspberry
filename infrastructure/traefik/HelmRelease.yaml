@@ -19,3 +19,6 @@ spec:
   values:
     deployment:
       kind: "Deployment"
+    ingressRoute:
+      dashboard:
+        enabled: true
