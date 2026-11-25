@@ -7,7 +7,9 @@ data:
   config.yaml: |
     metrics: 0.0.0.0:20000
     no-autoupdate: true
-    ingress:
-      # Forward all incoming traffic to Traefik HTTP entrypoint
-      - hostname: home.linuxdns.work
-        service: http://home-assistant.home-assistant.svc.cluster.local:8080
+    config.yaml: |
+        ingress:
+          # Forward all incoming traffic to Traefik in the 'traefik' namespace
+          - service: http://traefik.traefik.svc.cluster.local:80
+          # Required catch-all 404 rule
+          - service: http_status:404
