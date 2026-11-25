@@ -19,6 +19,11 @@ spec:
   values:
     deployment:
       kind: "Deployment"
+    autoscaling:
+      enabled: true
+      minReplicas: 1
+      maxReplicas: 3
+      targetCPUUtilizationPercentage: 80
     api:
       dashboard: true
     ingressRoute:
