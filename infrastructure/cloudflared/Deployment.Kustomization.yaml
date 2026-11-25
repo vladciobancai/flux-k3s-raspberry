@@ -21,11 +21,11 @@ spec:
         - --no-autoupdate
         - run
         env:
-        - name: TUNNEL_TOKEN
+        - name: token
           valueFrom:
             secretKeyRef:
-              name: cloudflared-secret
-              key: TUNNEL_TOKEN
+              name: cloudflare-tunnel-token
+              key: token
         livenessProbe:
           httpGet:
             path: /ready
